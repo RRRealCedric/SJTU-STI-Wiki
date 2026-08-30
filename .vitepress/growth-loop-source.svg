@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" seed="29"/>
+      <feColorMatrix values="0 0 0 0 .25 0 0 0 0 .27 0 0 0 0 .27 0 0 0 .1 0"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="1000" fill="#181c1d"/>
+  <rect x="1030" width="770" height="1000" fill="#222829"/>
+  <g fill="none" stroke="#aeb7b4" stroke-opacity=".14" stroke-width="2">
+    <path d="M80 90h640M80 150h420M80 850h700M80 910h520"/>
+    <path d="M90 70v860M180 70v860M270 70v860M360 70v860M450 70v860M540 70v860M630 70v860M720 70v860"/>
+    <circle cx="1450" cy="500" r="365"/>
+    <path d="M1080 500h720M1450 135v730"/>
+  </g>
+  <g fill="#b8c0bd" opacity=".28" font-family="monospace" font-size="20">
+    <text x="82" y="120">SJTU STI / PERSONAL CALIBRATION</text>
+    <text x="82" y="885">ACTION — EVIDENCE — REFLECTION — CHOICE</text>
+    <text x="1250" y="110">NOT ENDLESS PROGRESS</text>
+    <text x="1370" y="900">A CONSCIOUS RETURN</text>
+  </g>
+  <path d="M820 500C930 255 1135 255 1320 500c185 245 360 245 455 0-95-245-270-245-455 0S930 745 820 500Z" fill="none" stroke="#e7ebe8" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" opacity=".86"/>
+  <path d="M820 500C930 255 1135 255 1320 500" fill="none" stroke="#0c0f10" stroke-width="20" stroke-linecap="round" opacity=".94"/>
+  <path d="M1320 500c185 245 360 245 455 0" fill="none" stroke="#bfc7c4" stroke-width="20" stroke-linecap="round" opacity=".9"/>
+  <path d="M1775 500c-95-245-270-245-455 0" fill="none" stroke="#303738" stroke-width="20" stroke-linecap="round" opacity=".98"/>
+  <path d="M1320 500C1135 745 930 745 820 500" fill="none" stroke="#f3f5f2" stroke-width="20" stroke-linecap="round" opacity=".96"/>
+  <g stroke="#181c1d" stroke-width="7">
+    <circle cx="931" cy="350" r="13" fill="#e7ebe8"/>
+    <circle cx="1134" cy="361" r="13" fill="#181c1d" stroke="#e7ebe8"/>
+    <circle cx="1535" cy="346" r="13" fill="#e7ebe8"/>
+    <circle cx="1650" cy="642" r="13" fill="#181c1d" stroke="#e7ebe8"/>
+    <circle cx="1124" cy="645" r="13" fill="#e7ebe8"/>
+    <circle cx="930" cy="650" r="13" fill="#181c1d" stroke="#e7ebe8"/>
+  </g>
+  <circle cx="1320" cy="500" r="23" fill="#9b1733" stroke="#f0f2ef" stroke-width="5"/>
+  <path d="m1550 335 24 9-18 18" fill="none" stroke="#e7ebe8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m1085 659-24-9 18-18" fill="none" stroke="#e7ebe8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#d7ddda" font-family="monospace" font-size="18" font-weight="700">
+    <text x="902" y="315">01</text><text x="1107" y="326">02</text><text x="1510" y="310">03</text>
+    <text x="1630" y="685">04</text><text x="1104" y="692">05</text><text x="905" y="695">06</text>
+  </g>
+  <rect width="1800" height="1000" filter="url(#grain)" opacity=".28"/>
+</svg>

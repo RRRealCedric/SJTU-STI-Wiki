@@ -21,7 +21,7 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: '交大科创生存手册（SJTU STI Wiki）' }],
     ['meta', {
       property: 'og:description',
-      content: '让学生的成长发生在真实的研究、协作与创造中。'
+      content: '知道自己在做什么，为什么这么做，以及是否真正愿意继续。'
     }]
   ],
   markdown: {
@@ -31,8 +31,8 @@ export default defineConfig({
   },
   themeConfig: {
     logo: {
-      light: '/prism-mark-light.svg',
-      dark: '/prism-mark-dark.svg',
+      light: '/infinity-mark-light.svg',
+      dark: '/infinity-mark-dark.svg',
       alt: 'SJTU STI Wiki'
     },
     siteTitle: 'SJTU STI Wiki',
