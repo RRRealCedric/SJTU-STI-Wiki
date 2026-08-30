@@ -80,7 +80,8 @@ export default defineConfig({
         items: [
           { text: '项目章程', link: '/SJTU STI Wiki 项目章程' },
           { text: '内容模型与编辑规范', link: '/SJTU STI Wiki 内容模型与编辑规范' },
-          { text: '访谈到发布 SOP', link: '/SJTU STI Wiki 访谈到发布 SOP' }
+          { text: '访谈到发布 SOP', link: '/SJTU STI Wiki 访谈到发布 SOP' },
+          { text: '网站维护手册', link: '/SJTU STI Wiki 网站维护手册' }
         ]
       }
     ],
