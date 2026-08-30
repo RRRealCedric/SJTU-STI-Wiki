@@ -2,14 +2,13 @@
 layout: home
 title: 交大科创生存手册
 titleTemplate: SJTU STI Wiki
-
 hero:
   name: 交大科创生存手册
   text: 自觉 · 自知 · 自洽
   tagline: 知道自己在做什么，为什么这么做，以及是否真正愿意继续。
   actions:
     - theme: brand
-      text: 完成六项自查
+      text: 了解我们的主张
       link: /#six-principles
     - theme: alt
       text: 选择我的路径
@@ -52,7 +51,7 @@ hero:
 
 <section class="home-intro" aria-labelledby="home-intro-title">
   <p class="section-kicker">CHOOSE BY PURPOSE, NOT PRESTIGE</p>
-  <h2 id="home-intro-title">三条路径，不是三个等级</h2>
+  <h2 id="home-intro-title">三条路径</h2>
   <p class="section-lead">科研、创赛与创业遵循不同的评价逻辑。先明确目标和约束，再用一次可验证的交付决定下一步。</p>
 
   <div class="path-grid">
@@ -106,7 +105,7 @@ hero:
   <div>
     <p class="section-kicker">OPEN, WITH RESPONSIBILITY</p>
     <h2 id="home-contribute-title">共同维护，审慎公开</h2>
-    <p>GitHub 是公开平台与贡献入口。公开内容须经科协老师批准；访谈原始材料始终留在科协内部，不进入公开仓库。</p>
+    <p>GitHub 是公开平台与贡献入口。公开内容须经科协批准；访谈原始材料始终留在科协内部，不进入公开仓库；本页面设计和内容经过ai润色。</p>
   </div>
   <a class="contribute-link" href="https://github.com/RRRealCedric/SJTU-STI-Wiki" target="_blank" rel="noreferrer">前往 GitHub <span aria-hidden="true">↗</span></a>
 </section>
