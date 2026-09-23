@@ -20,6 +20,8 @@
   --sti-jade: #2d7569;
   --sti-amber: #a97816;
   --sti-ink: #171b1d;
+  --sti-focus: #f0b429;
+  --sti-content-width: 1160px;
 }
 
 .dark {
@@ -42,10 +44,19 @@
   letter-spacing: 0;
 }
 
+html {
+  scroll-padding-top: calc(var(--vp-nav-height) + 20px);
+}
+
 .VPNavBar {
   border-bottom: 1px solid var(--vp-c-divider);
   background: color-mix(in srgb, var(--vp-c-bg) 90%, transparent);
   backdrop-filter: blur(14px);
+}
+
+:where(a, button, [tabindex='0']):focus-visible {
+  outline: 3px solid var(--sti-focus);
+  outline-offset: 3px;
 }
 
 .VPNavBarTitle .title {
@@ -94,6 +105,20 @@
   z-index: 1;
   width: min(1160px, 100%);
   margin: 0 auto;
+}
+
+.VPHero .container::before {
+  position: absolute;
+  top: -54px;
+  right: 0;
+  color: rgba(246, 247, 244, 0.92);
+  content: '∞';
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(112px, 16vw, 220px);
+  font-weight: 400;
+  line-height: 0.8;
+  opacity: 0.16;
+  pointer-events: none;
 }
 
 .VPHero .main {
@@ -179,7 +204,7 @@
 .home-links,
 .home-contribute,
 .home-band {
-  padding: 88px max(24px, calc((100vw - 1160px) / 2));
+  padding: 88px max(24px, calc((100vw - var(--sti-content-width)) / 2));
 }
 
 .principles-section {
@@ -349,6 +374,14 @@
   transition: background-color 180ms ease, transform 180ms ease;
 }
 
+.path-item:focus-visible,
+.utility-links a:focus-visible,
+.self-check-link:focus-visible,
+.contribute-link:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
 .path-item + .path-item {
   border-left: 1px solid var(--vp-c-divider);
 }
@@ -457,6 +490,8 @@
   color: var(--vp-c-text-1) !important;
   font-weight: 600;
   text-decoration: none !important;
+  min-height: 64px;
+  align-items: center;
 }
 
 .utility-links a::after {
@@ -496,6 +531,9 @@
 
 .contribute-link {
   flex: 0 0 auto;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   padding: 12px 18px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 4px;
@@ -554,6 +592,12 @@
     background-position: 56% center;
   }
 
+  .VPHero .container::before {
+    top: -34px;
+    right: -8px;
+    font-size: 118px;
+  }
+
   .VPHero::before {
     width: 100%;
     background: rgba(15, 18, 19, 0.72);
@@ -569,6 +613,16 @@
 
   .VPHero .tagline {
     font-size: 16px;
+  }
+
+  .VPHero .actions {
+    display: grid;
+    width: min(100%, 22rem);
+    gap: 12px;
+  }
+
+  .VPHero .actions .VPButton {
+    width: 100%;
   }
 
   .home-intro,

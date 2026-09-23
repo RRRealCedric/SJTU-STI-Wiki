@@ -97,7 +97,7 @@ hero:
     <a href="./draft/科创通用能力">通用能力 <span>检索、执行、协作与复盘</span></a>
     <a href="./draft/交大科创资源地图">资源地图 <span>校内资源与官方入口</span></a>
     <a href="./draft/工具与模板库">工具与模板 <span>清单、工作表与行动骨架</span></a>
-    <a href="./draft/棱镜案例库">棱镜案例 <span>经授权、脱敏与核验的过程档案</span></a>
+    <a href="./draft/棱镜案例库">案例资料库 <span>经授权、脱敏与核验的过程档案</span></a>
   </nav>
 </section>
 

@@ -71,7 +71,7 @@ export default defineConfig({
           { text: '科创通用能力', link: '/draft/科创通用能力' },
           { text: '交大科创资源地图', link: '/draft/交大科创资源地图' },
           { text: '工具与模板库', link: '/draft/工具与模板库' },
-          { text: '棱镜案例库', link: '/draft/棱镜案例库' }
+          { text: '案例资料库', link: '/draft/棱镜案例库' }
         ]
       },
       {
