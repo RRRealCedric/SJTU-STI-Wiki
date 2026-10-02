@@ -18,8 +18,8 @@ hero:
 <section id="six-principles" class="principles-section" aria-labelledby="principles-title">
   <div class="section-heading">
     <p class="section-kicker">A CONTINUOUS CALIBRATION</p>
-    <h2 id="principles-title">成长发生在认识与行动的往复之间</h2>
-    <p class="section-lead">不是无限向前，而是在现实反馈中反复校准。继续、转向和停止，都可以是清醒的选择。</p>
+    <h2 id="principles-title">教育不是筛选，成长不是内卷</h2>
+    <p class="section-lead">我们相信，教育不应是让人无限向前，而是学会在现实反馈中反复校准——继续、转向和停止，都应当，也可以是清醒的选择。</p>
   </div>
 
   <div class="principle-groups">
@@ -46,7 +46,7 @@ hero:
     </section>
   </div>
 
-  <a class="self-check-link" href="./draft/开始之前：我是否需要做科创">开始一次四周试运行 <span aria-hidden="true">→</span></a>
+  <a class="self-check-link" href="./draft/开始之前：我是否需要做科创">不妨开始你的实践 <span aria-hidden="true">→</span></a>
 </section>
 
 <section class="home-intro" aria-labelledby="home-intro-title">

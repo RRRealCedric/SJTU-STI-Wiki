@@ -27,7 +27,7 @@ sensitivity: public
 | 修改字体、颜色、间距、响应式排版 | `.vitepress/theme/custom.css` | 本地编辑并检查桌面与手机 | 高 |
 | 修改 Logo 或首页背景 | `public/`、配置文件和 CSS | 本地替换并检查资源路径 | 高 |
 | 新增文章 | 新建 `.md`，必要时修改侧栏 | 本地编辑并构建 | 中 |
-| 修改采访、授权或发布规则 | 项目章程、编辑规范或 SOP | 先完成内部确认 | 高 |
+| 修改采访、授权或发布规则 | 项目章程、编辑规范或内部流程 | 先完成内部确认 | 高 |
 
 只改普通文章中的一两句话，可以使用 GitHub 网页编辑。只要涉及首页 HTML、CSS、配置或图片，必须在本地预览后再发布。
 
@@ -68,7 +68,6 @@ sensitivity: public
 | `SJTU STI Survival Manual 大纲.md` | 整本手册的内容框架 |
 | `SJTU STI Wiki 项目章程.md` | 项目使命、范围、角色和决策机制 |
 | `SJTU STI Wiki 内容模型与编辑规范.md` | 元数据、证据、写作和审核规则 |
-| `SJTU STI Wiki 访谈到发布 SOP.md` | 从访谈准备到公开发布的流程 |
 
 ### 网站文件
 
@@ -421,7 +420,6 @@ git push
 
 - [[SJTU STI Wiki 项目章程]]
 - [[SJTU STI Wiki 内容模型与编辑规范]]
-- [[SJTU STI Wiki 访谈到发布 SOP]]
 - [[SJTU STI Survival Manual 大纲]]
 - [GitHub 仓库](https://github.com/RRRealCedric/SJTU-STI-Wiki)
 - [公网网站](https://rrrealcedric.github.io/SJTU-STI-Wiki/)

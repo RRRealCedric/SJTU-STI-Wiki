@@ -77,7 +77,6 @@ sensitivity: public
 - [[SJTU STI Survival Manual 大纲]]
 - [[SJTU STI Wiki 项目章程]]
 - [[SJTU STI Wiki 内容模型与编辑规范]]
-- [[SJTU STI Wiki 访谈到发布 SOP]]
 
 ## 后续行动
 

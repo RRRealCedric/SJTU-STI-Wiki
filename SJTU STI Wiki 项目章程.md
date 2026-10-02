@@ -110,7 +110,7 @@ source: "项目发起说明；交大科创棱镜v2.docx；[[SJTU STI Survival Ma
 6. 根据内容成熟度决定是否举办集中交流活动。
 7. 学期末复盘覆盖率、使用效果、纠错和维护成本。
 
-访谈执行见 [[SJTU STI Wiki 访谈到发布 SOP]]。
+访谈执行由科协内部流程管理。
 
 ### 10. 衡量方式
 
@@ -172,7 +172,6 @@ Wiki 的长期价值不在于收集了多少故事，而在于能否把故事转
 - [[SJTU STI Wiki 首页]]
 - [[SJTU STI Survival Manual 大纲]]
 - [[SJTU STI Wiki 内容模型与编辑规范]]
-- [[SJTU STI Wiki 访谈到发布 SOP]]
 
 ## 后续行动
 

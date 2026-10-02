@@ -458,7 +458,7 @@ Wiki 中的陈述必须明确区分以下三类，详细规则见 [[SJTU STI Wik
 
 ## 09 访谈与知识生产
 
-完整流程见 [[SJTU STI Wiki 访谈到发布 SOP]]。
+完整访谈流程由科协内部管理。
 
 ### 9.1 访谈选题
 
@@ -514,7 +514,6 @@ Wiki 中的陈述必须明确区分以下三类，详细规则见 [[SJTU STI Wik
 - [[SJTU STI Wiki 首页]]
 - [[SJTU STI Wiki 项目章程]]
 - [[SJTU STI Wiki 内容模型与编辑规范]]
-- [[SJTU STI Wiki 访谈到发布 SOP]]
 
 ## 后续行动
 

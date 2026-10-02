@@ -4,7 +4,7 @@ import type MarkdownIt from 'markdown-it'
 
 function collectMarkdownFiles(directory: string, root = directory): string[] {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    if (entry.name.startsWith('.') || entry.name === 'node_modules') return []
+    if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === '_private') return []
 
     const absolute = path.join(directory, entry.name)
     if (entry.isDirectory()) return collectMarkdownFiles(absolute, root)

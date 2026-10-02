@@ -230,7 +230,7 @@ updated:
 - 无法核验的违法、歧视、骚扰、学术不端等严重指控不公开，应引导当事人使用合适的正式支持或申诉渠道。
 - 涉及法律、财务、医疗或心理问题时，明确 Wiki 不是专业意见。
 
-访谈材料的具体处理见 [[SJTU STI Wiki 访谈到发布 SOP]]。
+访谈材料的具体处理按科协内部流程执行。
 
 ### 9. 发布检查
 
@@ -286,7 +286,6 @@ updated:
 - [[SJTU STI Wiki 首页]]
 - [[SJTU STI Survival Manual 大纲]]
 - [[SJTU STI Wiki 项目章程]]
-- [[SJTU STI Wiki 访谈到发布 SOP]]
 
 ## 后续行动
 
