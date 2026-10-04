@@ -2,5 +2,7 @@ node_modules/
 .vitepress/cache/
 .vitepress/dist/
 _private/
+CollaborationSys/private/
+CollaborationSys_plan.md
 .DS_Store
 npm-debug.log*

@@ -18,7 +18,8 @@ hero:
 <section id="six-principles" class="principles-section" aria-labelledby="principles-title">
   <div class="section-heading">
     <p class="section-kicker">A CONTINUOUS CALIBRATION</p>
-    <h2 id="principles-title">教育不是筛选，成长不是内卷</h2>
+    <h2 id="principles-title">教育不是筛选，
+    成长不是内卷</h2>
     <p class="section-lead">我们相信，教育不应是让人无限向前，而是学会在现实反馈中反复校准——继续、转向和停止，都应当，也可以是清醒的选择。</p>
   </div>
 

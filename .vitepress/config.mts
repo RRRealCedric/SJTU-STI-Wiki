@@ -8,7 +8,7 @@ export default defineConfig({
   description: '为上海交通大学学生提供可核验、可行动、可持续修订的科研、创赛与创业指南。',
   lang: 'zh-CN',
   base: '/SJTU-STI-Wiki/',
-  srcExclude: ['_private/**'],
+  srcExclude: ['_private/**', 'CollaborationSys/**', 'CollaborationSys_plan.md'],
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: false,

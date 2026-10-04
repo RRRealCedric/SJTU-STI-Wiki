@@ -4,11 +4,11 @@ import type MarkdownIt from 'markdown-it'
 
 function collectMarkdownFiles(directory: string, root = directory): string[] {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === '_private') return []
+    if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === '_private' || entry.name === 'CollaborationSys') return []
 
     const absolute = path.join(directory, entry.name)
     if (entry.isDirectory()) return collectMarkdownFiles(absolute, root)
-    if (!entry.name.endsWith('.md') || entry.name === 'README.md') return []
+    if (!entry.name.endsWith('.md') || entry.name === 'README.md' || entry.name === 'CollaborationSys_plan.md') return []
 
     return [path.relative(root, absolute).replaceAll(path.sep, '/')]
   })
