@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
       <div class="cinema-content">
         <p class="hero-overline">交大科创生存手册</p>
         <h1 id="hero-title" class="animate-fade-rise">Look for and start<br /><em>your own journey</em></h1>
-        <p class="hero-copy animate-fade-rise-delay">知道自己在做什么，为什么这么做，以及是否真正愿意继续。</p>
+        <p class="hero-copy animate-fade-rise-delay">关于科创——知道自己在做什么，为什么这么做，以及是否真正愿意继续；</p>
         <div class="hero-actions animate-fade-rise-delay-2">
           <a class="glass-cta liquid-glass glass-cta-large" href="#six-principles">了解我们的主张</a>
           <a class="hero-text-link" href="./draft/开始之前：我是否需要做科创">选择我的路径 <span aria-hidden="true">↓</span></a>
