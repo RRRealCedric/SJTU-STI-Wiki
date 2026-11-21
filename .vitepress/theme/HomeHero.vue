@@ -5,6 +5,7 @@ let observer: IntersectionObserver | undefined
 let frame = 0
 let cleanup = () => {}
 let videoCleanup = () => {}
+let cursorCleanup = () => {}
 const isDark = ref(false)
 
 const toggleTheme = () => {
@@ -20,6 +21,14 @@ onMounted(() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (!root) return
+
+  const onPointerMove = (event: PointerEvent) => {
+    root.style.setProperty('--cursor-x', `${event.clientX}px`)
+    root.style.setProperty('--cursor-y', `${event.clientY}px`)
+  }
+
+  window.addEventListener('pointermove', onPointerMove, { passive: true })
+  cursorCleanup = () => window.removeEventListener('pointermove', onPointerMove)
 
   isDark.value = document.documentElement.classList.contains('dark')
 
@@ -79,12 +88,14 @@ onMounted(() => {
 onBeforeUnmount(() => {
   cleanup()
   videoCleanup()
+  cursorCleanup()
   observer?.disconnect()
 })
 </script>
 
 <template>
   <div class="sti-home">
+    <span class="cursor-glow" aria-hidden="true"></span>
     <section class="cinema-hero" aria-labelledby="hero-title">
       <video class="cinema-video" autoplay loop muted playsinline aria-hidden="true">
         <source src="/950605083-1-208.mp4" type="video/mp4" />
