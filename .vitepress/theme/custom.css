@@ -12,9 +12,8 @@
   --line-strong: rgba(18, 42, 49, .24);
   --accent: #147c70;
   --glow-one: rgba(20, 124, 112, .18);
-  --glow-two: rgba(229, 164, 113, .15);
+  --glow-two: rgba(229, 190, 56, .2);
   --glow-three: rgba(121, 111, 206, .12);
-  --cursor-glow: rgba(158, 75, 205, .28);
   --vp-c-brand-1: #147c70;
   --vp-c-brand-2: #0d665c;
   --vp-c-brand-3: #084e48;
@@ -44,9 +43,8 @@
   --line-strong: rgba(248, 251, 251, .24);
   --accent: #b9e5db;
   --glow-one: rgba(57, 216, 191, .2);
-  --glow-two: rgba(238, 165, 107, .14);
+  --glow-two: rgba(255, 198, 78, .22);
   --glow-three: rgba(141, 122, 246, .17);
-  --cursor-glow: rgba(255, 111, 185, .3);
   --vp-c-brand-1: #b9e5db;
   --vp-c-brand-2: #8acabd;
   --vp-c-brand-3: #63afa3;
@@ -170,10 +168,9 @@ input:focus-visible {
 .sti-home { position: relative; min-height: 100vh; overflow: hidden; background: var(--navy-deep); color: var(--ink); font-family: var(--font-body); }
 .sti-home::before,
 .sti-home::after { position: fixed; z-index: 0; content: ''; pointer-events: none; border-radius: 50%; filter: blur(34px); }
-.sti-home::before { width: 58vw; height: 58vw; top: 12vh; left: -20vw; background: radial-gradient(circle, var(--glow-one) 0%, transparent 66%); animation: glow-drift-a 10s ease-in-out infinite alternate; }
-.sti-home::after { width: 52vw; height: 52vw; right: -20vw; bottom: 4vh; background: radial-gradient(circle, var(--glow-two) 0%, transparent 68%); animation: glow-drift-b 13s ease-in-out infinite alternate; }
+.sti-home::before { width: 58vw; height: 58vw; top: 12vh; left: -20vw; background: radial-gradient(ellipse at 28% 26%, var(--glow-one) 0%, transparent 60%), radial-gradient(ellipse at 72% 74%, var(--glow-three) 0%, transparent 64%); animation: glow-drift-a 10s ease-in-out infinite alternate; }
+.sti-home::after { width: 52vw; height: 52vw; right: -20vw; bottom: 4vh; background: radial-gradient(ellipse at 68% 28%, var(--glow-two) 0%, transparent 58%), radial-gradient(ellipse at 28% 76%, var(--glow-one) 0%, transparent 62%); animation: glow-drift-b 13s ease-in-out infinite alternate; }
 .sti-home > * { position: relative; z-index: 1; }
-.sti-home > .cursor-glow { position: fixed; z-index: 0; width: 230px; height: 230px; top: var(--cursor-y, 50%); left: var(--cursor-x, 50%); border-radius: 50%; background: radial-gradient(circle, var(--cursor-glow) 0%, transparent 68%); filter: blur(20px); opacity: .8; pointer-events: none; transform: translate(-50%, -50%); transition: opacity 300ms ease; }
 .sti-home a { color: inherit; }
 .sti-home .path-item,
 .sti-home .path-item * { text-decoration: none !important; }
