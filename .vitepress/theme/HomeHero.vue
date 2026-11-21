@@ -1,10 +1,17 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 let observer: IntersectionObserver | undefined
 let frame = 0
 let cleanup = () => {}
 let videoCleanup = () => {}
+const isDark = ref(false)
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  document.documentElement.classList.toggle('dark', isDark.value)
+  localStorage.setItem('vitepress-theme-appearance', isDark.value ? 'dark' : 'light')
+}
 
 onMounted(() => {
   const root = document.querySelector('.sti-home')
@@ -12,6 +19,8 @@ onMounted(() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (!root) return
+
+  isDark.value = document.documentElement.classList.contains('dark')
 
   if (video) {
     const skipIntro = () => {
@@ -79,10 +88,20 @@ onBeforeUnmount(() => {
       <header class="glass-nav liquid-glass" aria-label="首页导航">
         <a class="glass-brand" href="./" aria-label="SJTU STI Wiki 首页"><span>SJTU STI Wiki</span><sup>∞</sup></a>
         <nav class="glass-links" aria-label="快捷导航">
-          <a href="#six-principles">主张</a>
-          <a href="#paths">三条路径</a>
+          <a href="#six-principles">手册主张</a>
+          <details class="glass-menu">
+            <summary>三条路径 <span aria-hidden="true">⌄</span></summary>
+            <div class="glass-menu-panel">
+              <a href="./draft/科研路径：从进入实验室到形成学术资产">科研</a>
+              <a href="./draft/创赛路径：从想法到可评审项目">创赛</a>
+              <a href="./draft/创业路径：从想法到真实验证">创业</a>
+            </div>
+          </details>
           <a href="#home-links-title">行动工具</a>
         </nav>
+        <button class="theme-toggle" type="button" :aria-label="isDark ? '切换到浅色模式' : '切换到夜间模式'" @click="toggleTheme">
+          <span aria-hidden="true">{{ isDark ? '☼' : '◐' }}</span>
+        </button>
         <a class="glass-cta liquid-glass" href="#paths">选择我的路径 <span aria-hidden="true">↗</span></a>
       </header>
 
