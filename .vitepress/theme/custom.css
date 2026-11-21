@@ -130,8 +130,9 @@ input:focus-visible {
 .VPDoc .content { padding-top: 76px; }
 .VPDoc .aside { padding-top: 80px; }
 .VPDoc .aside-container { border-left: 1px solid var(--line); }
-.VPSidebar { padding-top: calc(var(--vp-nav-height) + 28px); background: rgba(255, 255, 255, .58); }
-.dark .VPSidebar { background: rgba(0, 22, 32, .36); }
+.VPSidebar { padding-top: calc(var(--vp-nav-height) + 28px); background: var(--navy-deep) !important; }
+.VPSidebar .curtain,
+.VPDoc .aside-curtain { background: var(--navy-deep) !important; }
 .VPSidebarItem.level-0 > .item > .text { color: var(--ink) !important; font-weight: 600; }
 .VPSidebarItem .text { color: var(--ink-muted) !important; font-size: .8rem; }
 .VPSidebarItem .item:hover .text,
