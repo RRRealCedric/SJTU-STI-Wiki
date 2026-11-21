@@ -67,7 +67,7 @@ onMounted(() => {
       if (video && hero) {
         const localScroll = Math.max(0, -hero.getBoundingClientRect().top)
         const shift = Math.max(-72, Math.min(localScroll * -0.12, 0))
-        video.style.transform = `translate3d(0, ${shift}px, 0) scale(1.18)`
+        video.style.transform = `translate3d(0, ${shift}px, 0) scale(1.26)`
       }
     }
 
@@ -105,14 +105,14 @@ onBeforeUnmount(() => {
         <a class="glass-brand" href="./" aria-label="SJTU STI Wiki 首页"><span>SJTU STI Wiki</span><sup>∞</sup></a>
         <nav class="glass-links" aria-label="快捷导航">
           <a href="#six-principles">手册主张</a>
-          <details class="glass-menu">
-            <summary>三条路径 <span aria-hidden="true">⌄</span></summary>
+          <div class="glass-menu">
+            <a class="glass-menu-trigger" href="#paths">三条路径</a>
             <div class="glass-menu-panel">
               <a href="./draft/科研路径：从进入实验室到形成学术资产">科研</a>
               <a href="./draft/创赛路径：从想法到可评审项目">创赛</a>
               <a href="./draft/创业路径：从想法到真实验证">创业</a>
             </div>
-          </details>
+          </div>
           <a href="#home-links-title">行动工具</a>
         </nav>
         <button class="theme-toggle" type="button" :aria-label="isDark ? '切换到浅色模式' : '切换到夜间模式'" @click="toggleTheme">
