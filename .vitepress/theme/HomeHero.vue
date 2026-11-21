@@ -15,6 +15,7 @@ const toggleTheme = () => {
 
 onMounted(() => {
   const root = document.querySelector('.sti-home')
+  const hero = root?.querySelector<HTMLElement>('.cinema-hero')
   const video = document.querySelector<HTMLVideoElement>('.cinema-video')
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -54,7 +55,11 @@ onMounted(() => {
 
     const updateParallax = () => {
       frame = 0
-      if (video) video.style.transform = `translate3d(0, ${Math.min(window.scrollY * -0.12, 0)}px, 0) scale(1.18)`
+      if (video && hero) {
+        const localScroll = Math.max(0, -hero.getBoundingClientRect().top)
+        const shift = Math.max(-72, Math.min(localScroll * -0.12, 0))
+        video.style.transform = `translate3d(0, ${shift}px, 0) scale(1.18)`
+      }
     }
 
     const onScroll = () => {
