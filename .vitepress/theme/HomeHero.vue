@@ -6,6 +6,7 @@ let frame = 0
 let cleanup = () => {}
 const isDark = ref(false)
 const pathsOpen = ref(false)
+const introDone = ref(false)
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -20,6 +21,23 @@ onMounted(() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (!root) return
+
+  const introStartedAt = performance.now()
+  let introTimer = 0
+  let fallbackTimer = 0
+
+  const releaseIntro = () => {
+    const remaining = Math.max(0, 900 - (performance.now() - introStartedAt))
+    window.clearTimeout(introTimer)
+    introTimer = window.setTimeout(() => { introDone.value = true }, remaining)
+  }
+
+  if (video) {
+    video.addEventListener('canplay', releaseIntro, { once: true })
+    fallbackTimer = window.setTimeout(() => { introDone.value = true }, 2400)
+  } else {
+    introDone.value = true
+  }
 
   isDark.value = document.documentElement.classList.contains('dark')
 
@@ -62,6 +80,8 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   cleanup()
+  window.clearTimeout(introTimer)
+  window.clearTimeout(fallbackTimer)
   observer?.disconnect()
 })
 </script>
@@ -72,6 +92,10 @@ onBeforeUnmount(() => {
       <video class="cinema-video" autoplay loop muted playsinline preload="auto" aria-hidden="true">
         <source src="/hero-loop.mp4" type="video/mp4" />
       </video>
+      <div class="hero-intro" :class="{ 'is-hidden': introDone }" aria-hidden="true">
+        <span class="hero-intro-mark">∞</span>
+        <span class="hero-intro-line"><i></i></span>
+      </div>
 
       <header class="glass-nav liquid-glass" aria-label="首页导航">
         <a class="glass-brand" href="./" aria-label="SJTU STI Wiki 首页"><span>SJTU STI Wiki</span><sup>∞</sup></a>
