@@ -93,7 +93,10 @@ onBeforeUnmount(() => {
         <source src="/hero-loop.mp4" type="video/mp4" />
       </video>
       <div class="hero-intro" :class="{ 'is-hidden': introDone }" aria-hidden="true">
-        <span class="hero-intro-mark">∞</span>
+        <div class="hero-intro-orbit">
+          <span v-for="particle in 12" :key="particle" class="intro-particle" :style="{ '--particle-index': particle }"></span>
+          <span class="hero-intro-mark">∞</span>
+        </div>
         <span class="hero-intro-line"><i></i></span>
       </div>
 
