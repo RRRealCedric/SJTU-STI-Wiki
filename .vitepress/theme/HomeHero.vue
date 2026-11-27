@@ -4,7 +4,6 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 let observer: IntersectionObserver | undefined
 let frame = 0
 let cleanup = () => {}
-let videoCleanup = () => {}
 const isDark = ref(false)
 const pathsOpen = ref(false)
 
@@ -23,22 +22,6 @@ onMounted(() => {
   if (!root) return
 
   isDark.value = document.documentElement.classList.contains('dark')
-
-  if (video) {
-    const skipIntro = () => {
-      if (video.duration > 15 && video.currentTime < 15) video.currentTime = 15
-    }
-
-    video.addEventListener('loadedmetadata', skipIntro)
-    video.addEventListener('canplay', skipIntro)
-    video.addEventListener('timeupdate', skipIntro)
-    videoCleanup = () => {
-      video.removeEventListener('loadedmetadata', skipIntro)
-      video.removeEventListener('canplay', skipIntro)
-      video.removeEventListener('timeupdate', skipIntro)
-    }
-    skipIntro()
-  }
 
   root.classList.add('motion-ready')
 
@@ -79,7 +62,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   cleanup()
-  videoCleanup()
   observer?.disconnect()
 })
 </script>
@@ -87,8 +69,8 @@ onBeforeUnmount(() => {
 <template>
   <div class="sti-home" @click="pathsOpen = false">
     <section class="cinema-hero" aria-labelledby="hero-title">
-      <video class="cinema-video" autoplay loop muted playsinline aria-hidden="true">
-        <source src="/950605083-1-208.mp4" type="video/mp4" />
+      <video class="cinema-video" autoplay loop muted playsinline preload="auto" aria-hidden="true">
+        <source src="/hero-loop.mp4" type="video/mp4" />
       </video>
 
       <header class="glass-nav liquid-glass" aria-label="首页导航">
